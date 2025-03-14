@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trường THPT Krông Bông</title> <!--Lệnh tiêu đề-->
+    <link rel="stylesheet" href="krb.css"> <!-- Liên kết đến file CSS -->
+</head>
+<body>
+    <!-- Biểu ngữ nhấp nháy chào mừng ngày 26/3 -->
+    <div class="blinking-banner">CHÀO MỪNG NGÀY 26/3</div>
+    
+    <div class="banner" style="color: rgb(179, 201, 19);"></div>
+    
+    <!-- Phần slogan với hiệu ứng chạy chữ -->
+    <div class="slogan">
+        <div class="marquee-bar">
+            <span class="marquee-text" style="color: #ff4141; font-size: 50px;">
+                <b>Tập thể lớp 12A4 - THPT Krông Bông - Niên Khóa 2024-2025</b>
+            </span>
+        </div>
+        <!-- Châm ngôn -->
+        <div class="hex" style="color: rgb(105, 105, 0);">Chất lượng</div>
+        <div class="hex" style="color: rgb(8, 255, 95); ">Hiệu quả</div>
+        <div class="hex" style="color: rgb(255, 0, 195);">Sáng tạo</div>
+    </div>
+    
+    <!-- Nội dung chính với các liên kết đến các trang khác -->
+    <div class="content">
+        <a href="page1.html" class="block">
+            <img src="h0.jpg" alt="Ảnh 1">
+            <p>Thể Thao Chào Mừng 26/3</p>
+        </a>
+        <a href="page2.html" class="block">
+            <img src="h2.jpg" alt="Ảnh 2">
+            <p>Văn Nghệ Chào Mừng 26/3</p>
+        </a>
+        <a href="page3.html" class="block">
+            <img src="h3.jpg" alt="Ảnh 3">
+            <p>Các hoạt động Trong Ngày 26/3</p>
+        </a>
+        <a href="page4.html" class="block">
+            <img src="h4.jpg" alt="Ảnh 4">
+            <p>Chào mừng ngày thành lập đoàn thanh niên Việt Nam</p>
+        </a>
+    </div>
+    
+    <!-- Nút mở thanh tác vụ -->
+    <div class="taskbar-toggle" onclick="toggleTaskbar()">☰</div>
+    
+    <!-- Thanh tác vụ với các liên kết đăng nhập, nạp VIP, donate và hỗ trợ -->
+    <div class="taskbar" id="taskbar">
+        <ul>
+            <li><a href="login.html">Đăng nhập</a></li>
+            <li><a href="vip.html">Nạp VIP</a></li>
+            <li><a href="Donate.html">Donate</a></li>
+            <li><a href="help.html">Tư vấn hỗ trợ</a></li>
+        </ul>
+    </div>
+    
+    <!-- Biểu tượng tài khoản để mở hộp đăng nhập -->
+    <div class="account-icon" onclick="toggleLoginBox()"></div>
+    
+    <!-- Hộp đăng nhập -->
+    <div class="login-box" id="loginBox">
+        <input type="text" placeholder="Tên đăng nhập">
+        <input type="password" placeholder="Mật khẩu">
+        <button>Đăng nhập</button>
+    </div>
+    
+    <!-- Phần chân trang với thông tin liên hệ -->
+    <footer>
+        <p>&copy; 2025 Trường THPT Krông Bông - Đắk Lắk</p>
+        <p><strong>Tên nhóm:</strong> Nhóm 3 | <strong>Lớp:</strong> 12A4</p>
+        <p><strong>Mail liên hệ:</strong> nhom3xyzhungde123@gmail.com</p>
+        <p><strong>Số điện thoại:</strong> 0945337227</p>
+    </footer>
+    
+    <!-- JavaScript để điều khiển hộp đăng nhập và thanh tác vụ -->
+    <script>
+        function toggleLoginBox() {
+            var loginBox = document.getElementById("loginBox");
+            if (loginBox.style.display === "block") {
+                loginBox.style.display = "none";
+            } else {
+                loginBox.style.display = "block";
+            }
+        }
+
+        function toggleTaskbar() {
+            var taskbar = document.getElementById("taskbar");
+            taskbar.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
